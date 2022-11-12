@@ -155,21 +155,49 @@ class FigureA extends StatelessWidget {
       appBar: AppBar(
           title: const Text('Figure A'), backgroundColor: Color(0xff351c75)),
       body: Center(
-        child: ElevatedButton(
-          style: ElevatedButton.styleFrom(
-              primary: Color(0xff351c75),
-              padding: EdgeInsets.all(15),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15))),
-          child: const Text('Proceedd to Figure B'),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const FigureB()),
-            );
-          },
-        ),
-      ),
+          child: Column(
+        children: <Widget>[
+          Container(
+            margin: EdgeInsets.all(10),
+            width: 400,
+            height: 150,
+            color: Colors.green,
+          ),
+          Container(
+            margin: EdgeInsets.all(10),
+            width: 400,
+            height: 150,
+            color: Colors.blue,
+          ),
+          Container(
+            margin: EdgeInsets.all(10),
+            width: 400,
+            height: 150,
+            color: Colors.yellow,
+          ),
+          Container(
+            margin: EdgeInsets.all(10),
+            width: 400,
+            height: 150,
+            color: Colors.red,
+          ),
+          SizedBox(height: 10),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+                primary: Color(0xff351c75),
+                padding: EdgeInsets.all(15),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15))),
+            child: const Text('Proceedd to Figure B'),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const FigureB()),
+              );
+            },
+          ),
+        ],
+      )),
     );
   }
 }
@@ -182,19 +210,47 @@ class FigureB extends StatelessWidget {
       appBar: AppBar(
           title: const Text('Figure B'), backgroundColor: Color(0xff351c75)),
       body: Center(
-        child: ElevatedButton(
-          style: ElevatedButton.styleFrom(
-              primary: Color(0xff351c75),
-              padding: EdgeInsets.all(15),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15))),
-          child: const Text('Proceedd to Figure C'),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const FigureC()),
-            );
-          },
+        child: Column(
+          children: <Widget>[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Container(
+                  margin: EdgeInsets.all(10),
+                  width: 100,
+                  height: 100,
+                  color: Colors.pink,
+                ),
+                Container(
+                  margin: EdgeInsets.all(10),
+                  width: 100,
+                  height: 100,
+                  color: Colors.greenAccent,
+                ),
+                Container(
+                  margin: EdgeInsets.all(10),
+                  width: 100,
+                  height: 100,
+                  color: Colors.blueAccent,
+                )
+              ],
+            ),
+            SizedBox(height: 40),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                  primary: Color(0xff351c75),
+                  padding: EdgeInsets.all(15),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15))),
+              child: const Text('Proceedd to Figure C'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const FigureC()),
+                );
+              },
+            ),
+          ],
         ),
       ),
     );
@@ -208,7 +264,59 @@ class FigureC extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
           title: const Text('Figure C'), backgroundColor: Color(0xff351c75)),
-      body: Center(),
+      body: Center(
+        child: Column(
+          children: <Widget>[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Container(
+                  margin: EdgeInsets.all(10),
+                  width: 100,
+                  height: 100,
+                  color: Colors.pink,
+                ),
+                Container(
+                  margin: EdgeInsets.all(10),
+                  width: 100,
+                  height: 100,
+                  color: Colors.greenAccent,
+                ),
+                Container(
+                  margin: EdgeInsets.all(10),
+                  width: 100,
+                  height: 100,
+                  color: Colors.blueAccent,
+                )
+              ],
+            ),
+            Container(
+              margin: EdgeInsets.all(10),
+              width: 400,
+              height: 150,
+              color: Colors.green,
+            ),
+            Container(
+              margin: EdgeInsets.all(10),
+              width: 400,
+              height: 150,
+              color: Colors.blue,
+            ),
+            Container(
+              margin: EdgeInsets.all(10),
+              width: 400,
+              height: 150,
+              color: Colors.yellow,
+            ),
+            Container(
+              margin: EdgeInsets.all(10),
+              width: 400,
+              height: 150,
+              color: Colors.red,
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
